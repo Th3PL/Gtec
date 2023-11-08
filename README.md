@@ -13,7 +13,8 @@ Nosso objetivo é tornar o mundo um lugar mais sustentável por meio da nossa pa
 2. Instale as seguintes Bibliotecas:
    - ArduinoJson
    - DHT sensor library
-3. Copie e cole o código presente no arquivo Código-arduinoIDE.txt, presente na pasta códigos.
+3. Copie e cole o código presente no arquivo Código-arduinoIDE.txt, presente na pasta códigos e depois é só passar para a placa.<br>
+⚠️ Em caso de erro, verifique as conexões e a instalação das librarirs
 
 
 ## Node-red
@@ -27,9 +28,21 @@ Nosso objetivo é tornar o mundo um lugar mais sustentável por meio da nossa pa
 5. Já dentro da plataforma, acesse o menu no canto superior direito e clique em "Manege palette" depois em "Install" e instale os seguinte palletes:
    - node-red-node-serialport
    - node-red-dashboard
-
+     
 
 ## Configulando nós
 Dentro do node-red configure os nós da seguinte forma:
+
+![Fluxo](Gtec/imagens/fluxo-node-red.png) <br>
+⚠️IMPORTANTE: Não esuqeça de adaptar a porta COM de acordo com a utilizada
+
+
+Após a configurar como desejar o dashboard e der o deploy, terá algo parecido com isso em sua tela:
+
+![Fluxo](Gtec/imagens/dashboard.png)
+
+### Voce Pode conferir as imagens completas de nosso projeto [Clicando aqui](Gtec/imagens) e também um breve video sobre as atualizações em relação ao ultimo sprint [Clicando aqui](https://youtu.be/GAt0ywETws)
+
+
 
 
