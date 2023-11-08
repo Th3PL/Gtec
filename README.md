@@ -24,8 +24,9 @@ Nosso objetivo é tornar o mundo um lugar mais sustentável por meio da nossa pa
    - node-red
 4. Acesse com seu browser a URL:
    - http://localhost:1880
-5. Já dentro da plataforma, acesse o menu no canto superior direito e clique em "Manege palette" depois em "Install" e instale o seguinte pallete:
+5. Já dentro da plataforma, acesse o menu no canto superior direito e clique em "Manege palette" depois em "Install" e instale os seguinte palletes:
    - node-red-node-serialport
+   - node-red-dashboard
 
 
 ## Configulando nós
