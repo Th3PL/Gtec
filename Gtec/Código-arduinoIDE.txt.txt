@@ -1,0 +1,55 @@
+#include <DHT.h>
+#include <ArduinoJson.h> // Biblioteca ArduinoJson
+
+#define DHTPIN 10
+#define DHTTYPE DHT11
+#define LDRPIN A2 // Pino do LDR
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  delay(1000);
+  dht.begin();
+  Serial.begin(9600);
+}
+
+void loop() {
+  unsigned long currentTime = millis();
+  static unsigned long previousTime = 0;
+  static unsigned long temperatureReadInterval = 500; // Leitura a cada 0,5 segundos
+
+  float temperature = dht.readTemperature();
+  float humidity = dht.readHumidity();
+
+  // Lê o valor do LDR
+  int ldrValue = analogRead(LDRPIN);
+
+  // Crie um objeto JSON com os dados
+  StaticJsonDocument<200> json;
+  json["temperature"] = temperature;
+  json["humidity"] = humidity;
+  json["ldrValue"] = ldrValue;
+
+  // Serialize o objeto JSON em uma string JSON
+  String jsonString;
+  serializeJson(json, jsonString);
+
+  // Envia a string JSON pelo monitor serial
+  Serial.println(jsonString);
+
+  if (currentTime - previousTime >= temperatureReadInterval) {
+    // Realize as ações relacionadas à temperatura aqui
+    previousTime = currentTime;
+
+    if (temperature > 30) {
+      //Serial.println("Temperatura alta detectada!");
+      // Se desejar, você pode adicionar ações adicionais aqui, como acionar algum dispositivo.
+    } else {
+      //Serial.println("Temp: " + String(temperature) + "C");
+      //Serial.println("Hum: " + String(humidity) + "%");
+      //delay(3000);
+      //Serial.println("LDR: " + String(ldrValue));
+      //delay(2500);
+    }
+  }
+}
