@@ -41,7 +41,7 @@ Após a configurar como desejar o dashboard e der o deploy, terá algo parecido 
 
 ![Fluxo](Gtec/imagens/dashboard.png)
 
-### Voce Pode conferir as imagens completas de nosso projeto [Clicando aqui](Gtec/imagens) e também um breve video sobre as atualizações em relação ao ultimo sprint [Clicando aqui](https://youtu.be/GAt0ywETws)
+### Voce Pode conferir as imagens completas de nosso projeto [Clicando aqui](Gtec/imagens) e também um breve video sobre as atualizações em relação ao ultimo sprint [Clicando aqui](https://youtu.be/_GAt0ywETws)
 
 
 
